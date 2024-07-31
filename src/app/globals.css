@@ -21,6 +21,7 @@
   }
 }
 
+
 body {
   overflow-x: hidden;
   color: rgb(var(--foreground-rgb));
@@ -249,5 +250,16 @@ body {
 
 .text-reveal-scale:nth-child(4) {
   animation-delay: 1.1s;
+}
+
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.main {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
