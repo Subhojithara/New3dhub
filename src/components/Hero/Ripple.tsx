@@ -9,6 +9,7 @@ const projects = [
     name: "Dyal Thak",
     handle: "dyal_thak",
     vignette: 'https://images.unsplash.com/photo-1722218530941-fb046c70bb30?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    
   },
   {
     name: "Leidinger Matthias",

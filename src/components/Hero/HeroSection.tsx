@@ -88,7 +88,7 @@ const HeroSection: FC = () => {
     <section className="relative flex justify-center items-center min-h-screen h-[40rem] w-full bg-white section-fade-in">
       <div ref={mountRef} className="absolute top-0 left-0 w-full h-full blur-3xl"></div>
       <div className="relative z-10 flex flex-col justify-center items-center text-center p-4">
-        <h1 className="lg:text-8xl md:text-6xl text-4xl font-['Satoshi'] font-bold leading-tight text-white text-reveal">
+        <h1 className="lg:text-8xl md:text-6xl text-4xl font-bold leading-tight text-white text-reveal">
           Bringing Your
           <div className="flex flex-wrap space-x-6 justify-center">
             <span className="text-reveal-left">Dream Into</span>

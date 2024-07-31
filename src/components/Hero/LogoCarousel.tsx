@@ -17,7 +17,7 @@ const LogoCarousel = () => {
                 transition: {
                     repeat: Infinity,
                     repeatType: 'loop',
-                    duration: 20, // Adjust the duration as needed for the scroll speed
+                    duration: 15, // Adjust the duration as needed for the scroll speed
                     ease: 'linear',
                 },
             });

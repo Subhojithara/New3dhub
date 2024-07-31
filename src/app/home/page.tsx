@@ -7,6 +7,7 @@ import ValueProp from "@/components/Hero/ValueProp";
 import OurProses from "@/components/Hero/OurProses";
 import Footer from "@/components/Footer";
 import MarketSize from "@/components/Hero/MarketSize";
+import SVGMaskAnimation from "@/components/Hero/SVGMaskAnimation";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <LogoCarousel />
       <MoreBorder />
       <Ripple />
+      <SVGMaskAnimation />
       <MarketSize />
       <ValueProp />
       <OurProses />
