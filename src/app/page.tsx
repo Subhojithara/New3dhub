@@ -1,10 +1,12 @@
-import HeroSection from "@/components/HeroSection";
+
+
+import LoadingHero from "@/components/LoadingHero";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
-      <HeroSection />
+      <LoadingHero />
     </div>
   );
 }
