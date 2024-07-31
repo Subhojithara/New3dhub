@@ -1,0 +1,25 @@
+.scrollContainer {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.scrollContent {
+  display: flex;
+  width: 600%;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left:120px;
+  flex-shrink: 0;
+}
+
+

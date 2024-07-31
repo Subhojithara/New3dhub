@@ -34,10 +34,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-
-
     function raf(time: number) {
-
       requestAnimationFrame(raf);
     }
 

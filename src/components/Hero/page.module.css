@@ -1,5 +1,15 @@
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
 .main {
-  height: 200vh; /* Increase height to allow scrolling */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.main {
+  height: 150vh; /* Increase height to allow scrolling */
   overflow: auto; /* Allow scrolling */
   position: relative;
 }
