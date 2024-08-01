@@ -8,6 +8,7 @@ import OurProses from "@/components/Hero/OurProses";
 import Footer from "@/components/Footer";
 import MarketSize from "@/components/Hero/MarketSize";
 import SVGMaskAnimation from "@/components/Hero/SVGMaskAnimation";
+import Stats from "@/components/Hero/Stats";
 
 export default function Home() {
   return (
@@ -17,9 +18,11 @@ export default function Home() {
       <MoreBorder />
       <Ripple />
       <SVGMaskAnimation />
-      <MarketSize />
       <ValueProp />
+      <Stats />
+      <MarketSize />
       <OurProses />
+      <Footer />
     </div>
   );
 }

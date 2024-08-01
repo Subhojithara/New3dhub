@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -27,7 +25,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
         scrollTrigger: {
           trigger: container.current,
           scrub: true,
-          start: 'top 100%',
+          start: 'top 124%',
           end: `+=${window.innerHeight / 1.5}`,
         },
         ease: 'none',

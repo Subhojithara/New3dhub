@@ -4,10 +4,16 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Home.module.css';
+import AnimatedText from '@/components/ui/AnimatedText';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SectionOne: React.FC = () => {
+
+  const phrase = "India has the third-largest digital shopping base (600 million internet users and 185 million online shoppers)";
+
+
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -63,7 +69,11 @@ const SectionOne: React.FC = () => {
           <div className="w-96 h-14 bg-gradient-to-r text-white from-orange-500 via-orange-300 to-orange-100 -rotate-2 flex text-center justify-center text-4xl items-center font-['Bebas_Neue'] rounded-xl shadow-xl hover-element duration-500 hover:scale-110">
             <h1>Lorem ipsum dolor sit amet</h1>
           </div>
-          <p className="pt-10 w-[40rem] text-4xl font-semibold hover-element duration-500 hover:scale-110 reveal-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, quam error exercitationem aliquam illo nihil.</p>
+          <div className="flex justify-center items-center text-3xl">
+        <div className="w-[44rem] mt-10">
+        <AnimatedText text={phrase} />
+        </div>
+      </div>
         </div>
         <div className="h-96 w-96 rounded-full bg-gradient-to-r from-orange-500 via-orange-300 to-orange-100 rotating-element">
           <div className="h-20 w-20 rounded-full bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-100"></div>
