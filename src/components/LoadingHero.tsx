@@ -4,8 +4,26 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import Link from 'next/link';
 import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
+import { PlaceholdersAndVanishInput } from './ui/placeholders-and-vanish-input';
 
 export default function LoadingHero() {
+  const placeholders = [
+    "What's the first rule of Fight Club?",
+    "Who is Tyler Durden?",
+    "Where is Andrew Laeddis Hiding?",
+    "Write a Javascript method to reverse a string",
+    "How to assemble your own PC?",
+  ];
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+  };
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("submitted");
+  };
+
   const buttonRef = useRef<HTMLButtonElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const circleRef = useRef<HTMLDivElement>(null);
@@ -15,6 +33,8 @@ export default function LoadingHero() {
   const [soundEnabled, setSoundEnabled] = useState(false);
 
   useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
     const button = buttonRef.current;
 
     const handleMouseMove = (event: MouseEvent) => {
@@ -35,6 +55,7 @@ export default function LoadingHero() {
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
+      document.body.style.overflow = ''; // Re-enable scrolling when the component unmounts
     };
   }, []);
 
@@ -76,7 +97,6 @@ export default function LoadingHero() {
 
   const handleSubscribe = (event: React.FormEvent) => {
     event.preventDefault();
-    
   };
 
   useEffect(() => {
@@ -100,24 +120,13 @@ export default function LoadingHero() {
   };
 
   return (
-    <div className="relative h-screen w-full">
+    <div className="h-screen w-full overflow-hidden">
       <video ref={videoRef} className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted={!soundEnabled}>
         <source src="/videos/video.mp4" type="video/mp4" />
       </video>
       <div className="absolute lg:bottom-12 bottom-40 left-5 m-4 text-white lg:w-96 md:w-3/4 sm:w-2/3" ref={textRef}>
         <p>We help Brands leverage traditional advertising through the biggest festivals of India, using modern-day creative strategies that impact and drive customer loyalty</p>
       </div>
-      <form
-        ref={formRef}
-        className="absolute bottom-20 left-0 right-0 mx-auto lg:w-1/3 md:w-1/2 w-96 p-4 rounded-full shadow-md flex items-center bg-white bg-opacity-20 backdrop-blur-md"
-        style={{ transform: 'translateY(20px)', opacity: 0, zIndex: 10 }}
-        onSubmit={handleSubscribe}
-      >
-        <input type="email" placeholder="Enter your email" className="flex-1 p-2 rounded-l bg-transparent placeholder-white text-white focus:outline-none" required />
-        <button type="submit" className="bg-black rounded-full text-white p-2 pl-4 pr-4">
-          Subscribe
-        </button>
-      </form>
       <div className="absolute inset-0 flex items-center justify-center">
         <Link href="/home" passHref>
           <button
@@ -143,13 +152,19 @@ export default function LoadingHero() {
           }}
         ></div>
       </div>
+      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-full flex justify-center">
+        <PlaceholdersAndVanishInput
+          placeholders={placeholders}
+          onChange={handleChange}
+          onSubmit={onSubmit}
+        />
+      </div>
       <button
         onClick={toggleSound}
         className="absolute bottom-5 right-5 bg-black text-white p-3 rounded-full focus:outline-none"
       >
         {soundEnabled ? <FaVolumeUp size={24} /> : <FaVolumeMute size={24} />}
       </button>
-      
     </div>
   );
 }

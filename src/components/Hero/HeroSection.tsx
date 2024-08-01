@@ -7,6 +7,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 const words = `We help Brands leverage traditional advertising through the biggest festivals of India, using modern-day creative strategies that impact and drive customer loyalty`;
 
 const HeroSection: FC = () => {
+  
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
