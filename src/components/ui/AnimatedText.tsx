@@ -36,7 +36,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
 
   const splitWords = (phrase: string) => {
     return phrase.split(' ').map((word, i) => (
-      <p key={`${word}_${i}`} style={{ display: 'inline-block', margin: '0 1.5vw 0 0', fontWeight: 700 }}>
+      <p key={`${word}_${i}`} style={{ display: 'inline-block', margin: '0 1.5vw 0 0', }}>
         {splitLetters(word)}
       </p>
     ));

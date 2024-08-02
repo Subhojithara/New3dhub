@@ -34,7 +34,7 @@ const StatItem: React.FC<StatItemProps> = ({ src, alt, text }) => {
         src={src}
         alt={alt}
         width={256}
-        height={256}
+        height={500}
       />
       <div className="text-start text-3xl w-[45rem]">
         <AnimatedText text={text} />
@@ -46,12 +46,12 @@ const StatItem: React.FC<StatItemProps> = ({ src, alt, text }) => {
 const Stats: React.FC = () => {
   const statsData: StatItemProps[] = [
     {
-      src: '/stats/shoping.png',
+      src: '/stats/shoping.svg',
       alt: 'shopping',
       text: 'India has the third-largest digital shopping base (600 million internet users and 185 million online shoppers)',
     },
     {
-      src: '/stats/market.png',
+      src: '/stats/market.svg',
       alt: 'market',
       text: 'India is home to 600+ D2C brands with an estimated market size of over $66 billion in 2023',
     },

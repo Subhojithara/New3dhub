@@ -4,7 +4,7 @@ import React from 'react'
 import AnimatedText from '@/components/ui/AnimatedText';
 
 
-const MoreBorder = () => {
+function MoreBorder () {
 
   const phrase = "2025 and forward is all set to bring in more revolution for the B2C & D2C Brands. The growth is as it’s peak!";
   
