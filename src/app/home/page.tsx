@@ -1,16 +1,22 @@
-import HeroSection from "@/components/Hero/HeroSection";
-import Ripple from "@/components/Hero/Ripple";
-import MoreBorder from "@/components/Hero/MoreBorder";
-import Image from "next/image";
-import LogoCarousel from "@/components/Hero/LogoCarousel";
-import ValueProp from "@/components/Hero/ValueProp";
-import OurProses from "@/components/Hero/OurProses";
-import Footer from "@/components/Footer";
-import MarketSize from "@/components/Hero/MarketSize";
-import SVGMaskAnimation from "@/components/Hero/SVGMaskAnimation";
-import Stats from "@/components/Hero/Stats";
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
+
+// Dynamic imports for code splitting
+const HeroSection = dynamic(() => import('@/components/Hero/HeroSection'));
+const Ripple = dynamic(() => import('@/components/Hero/Ripple'));
+const MoreBorder = dynamic(() => import('@/components/Hero/MoreBorder'));
+const LogoCarousel = dynamic(() => import('@/components/Hero/LogoCarousel'));
+const ValueProp = dynamic(() => import('@/components/Hero/ValueProp'));
+const Stats = dynamic(() => import('@/components/Hero/Stats'));
+const MarketSize = dynamic(() => import('@/components/Hero/MarketSize'));
+const OurProses = dynamic(() => import('@/components/Hero/OurProses'));
+const Footer = dynamic(() => import('@/components/Footer'));
+const SVGMaskAnimation = dynamic(() => import('@/components/Hero/SVGMaskAnimation'));
 
 export default function Home() {
+  // Your component logic here
+
   return (
     <div className="bg-white text-black">
       <HeroSection />
