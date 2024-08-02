@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import AnimatedText from '../ui/AnimatedText';
+import Image from 'next/image';
 
 function Stats() {
   const shoping = "India has the third-largest digital shopping base (600 million internet users and 185 million online shoppers)";
@@ -38,77 +39,86 @@ function Stats() {
   }, []);
 
   return (
-    <>
-      <div className="h-mini-screen w-full">
-        <div className="flex justify-center items-center text-center space-x-48 mt-10">
-          <img 
-            ref={shopingImageRef} 
-            className="h-64 w-auto" 
-            src="/stats/shoping.png" 
-            alt="shopping" 
-          />
-          <div className="text-start text-3xl w-[45rem]">
-            <AnimatedText text={shoping} />
-          </div>
-        </div>
-        <div className="justify-center items-center flex">
-          <div className="w-[86rem] border border-black/30 mt-10 rounded-full"></div>
-        </div>
-        <div className="flex justify-center items-center text-center space-x-48 mt-10">
-          <img 
-            ref={marketImageRef} 
-            className="h-64 w-auto" 
-            src="/stats/market.png" 
-            alt="market" 
-          />
-          <div className="text-start text-3xl w-[45rem]">
-            <AnimatedText text={market} />
-          </div>
-        </div>
-        <div className="justify-center items-center flex">
-          <div className="w-[86rem] border border-black/30 mt-10 rounded-full"></div>
-        </div>
-        <div className="flex justify-center items-center text-center space-x-48 mt-10">
-          <img 
-            ref={investmentImageRef} 
-            className="h-64 w-auto" 
-            src="/stats/mony.png" 
-            alt="investment" 
-          />
-          <div className="text-start text-3xl w-[45rem]">
-            <AnimatedText text={investment} />
-          </div>
-        </div>
-        <div className="justify-center items-center flex">
-          <div className="w-[86rem] border border-black/30 mt-10 rounded-full"></div>
-        </div>
-        <div className="flex justify-center items-center text-center space-x-48 mt-10">
-          <img 
-            ref={growthImageRef} 
-            className="h-64 w-auto" 
-            src="/stats/groth.png" 
-            alt="growth" 
-          />
-          <div className="text-start text-3xl w-[45rem]">
-            <AnimatedText text={growth} />
-          </div>
-        </div>
-        <div className="justify-center items-center flex">
-          <div className="w-[86rem] border border-black/30 mt-10 rounded-full"></div>
-        </div>
-        <div className="flex justify-center items-center text-center space-x-48 mt-10">
-          <img 
-            ref={consumerEngagementImageRef} 
-            className="h-64 w-auto" 
-            src="/stats/marketing.png" 
-            alt="consumer engagement" 
-          />
-          <div className="text-start text-3xl w-[45rem]">
-            <AnimatedText text={consumerEngagement} />
-          </div>
+    <div className="h-mini-screen w-full">
+      <div className="flex justify-center items-center text-center space-x-48 mt-10">
+        <Image 
+          ref={shopingImageRef} 
+          className="h-64 w-auto" 
+          src="/stats/shoping.png" 
+          alt="shopping" 
+          width={256}
+          height={256}
+          onLoad={() => console.log('Shopping image loaded')}
+        />
+        <div className="text-start text-3xl w-[45rem]">
+          <AnimatedText text={shoping} />
         </div>
       </div>
-    </>
+      <div className="justify-center items-center flex">
+        <div className="w-[86rem] border border-black/30 mt-10 rounded-full"></div>
+      </div>
+      <div className="flex justify-center items-center text-center space-x-48 mt-10">
+        <Image 
+          ref={marketImageRef} 
+          className="h-64 w-auto" 
+          src="/stats/market.png" 
+          alt="market" 
+          width={256}
+          height={256}
+        />
+        <div className="text-start text-3xl w-[45rem]">
+          <AnimatedText text={market} />
+        </div>
+      </div>
+      <div className="justify-center items-center flex">
+        <div className="w-[86rem] border border-black/30 mt-10 rounded-full"></div>
+      </div>
+      <div className="flex justify-center items-center text-center space-x-48 mt-10">
+        <Image 
+          ref={investmentImageRef} 
+          className="h-64 w-auto" 
+          src="/stats/mony.png" 
+          alt="investment" 
+          width={256}
+          height={256}
+        />
+        <div className="text-start text-3xl w-[45rem]">
+          <AnimatedText text={investment} />
+        </div>
+      </div>
+      <div className="justify-center items-center flex">
+        <div className="w-[86rem] border border-black/30 mt-10 rounded-full"></div>
+      </div>
+      <div className="flex justify-center items-center text-center space-x-48 mt-10">
+        <Image 
+          ref={growthImageRef} 
+          className="h-64 w-auto" 
+          src="/stats/groth.png" 
+          alt="growth" 
+          width={256}
+          height={256}
+        />
+        <div className="text-start text-3xl w-[45rem]">
+          <AnimatedText text={growth} />
+        </div>
+      </div>
+      <div className="justify-center items-center flex">
+        <div className="w-[86rem] border border-black/30 mt-10 rounded-full"></div>
+      </div>
+      <div className="flex justify-center items-center text-center space-x-48 mt-10">
+        <Image 
+          ref={consumerEngagementImageRef} 
+          className="h-64 w-auto" 
+          src="/stats/marketing.png" 
+          alt="consumer engagement" 
+          width={256}
+          height={256}
+        />
+        <div className="text-start text-3xl w-[45rem]">
+          <AnimatedText text={consumerEngagement} />
+        </div>
+      </div>
+    </div>
   );
 }
 

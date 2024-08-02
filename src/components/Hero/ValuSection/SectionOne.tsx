@@ -13,7 +13,6 @@ const SectionOne: React.FC = () => {
 
   const phrase = "India has the third-largest digital shopping base (600 million internet users and 185 million online shoppers)";
 
-
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

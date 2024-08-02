@@ -1,23 +1,24 @@
 "use client";
 
-import React, { useEffect, useRef, FC } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 const words = `We help Brands leverage traditional advertising through the biggest festivals of India, using modern-day creative strategies that impact and drive customer loyalty`;
 
-const HeroSection: FC = () => {
-  
+const HeroSection: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const currentMountRef = mountRef.current;
 
-    // Vertex and fragment shader code remains the same
     const vertexShader = `
       precision mediump float;
+
       uniform float uTime;
+
       varying vec2 vUv;
+
       void main() {
         vUv = uv;
         vec3 pos = position;
@@ -31,15 +32,20 @@ const HeroSection: FC = () => {
 
     const fragmentShader = `
       precision mediump float;
+
       uniform float uTime;
+
       varying vec2 vUv;
+
       void main() {
         vec3 color = vec3(0.95);
         float x = vUv.x + uTime * 0.1;
         float y = vUv.y + uTime * 0.1;
+
         color.r = sin(x * 10.0) * 0.5 + 0.5;
         color.g = sin(y * 10.0) * 0.5 + 0.5;
         color.b = sin((x + y) * 10.0) * 0.5 + 0.5;
+
         gl_FragColor = vec4(color * 0.8 + 0.2, 1.0);
       }
     `;
@@ -86,18 +92,36 @@ const HeroSection: FC = () => {
   }, []);
 
   return (
-    <section className="relative flex justify-center items-center min-h-screen h-[40rem] w-full bg-white section-fade-in">
+    <section className="relative flex justify-center items-center lg:min-h-screen h-[40rem] mx-auto w-screen bg-white">
       <div ref={mountRef} className="absolute top-0 left-0 w-full h-full blur-3xl"></div>
       <div className="relative z-10 flex flex-col justify-center items-center text-center p-4">
-        <h1 className="lg:text-8xl md:text-6xl text-4xl font-bold leading-tight text-white text-reveal">
+        <h1 className="lg:text-8xl text-4xl font-bold leading-tight text-white">
           Bringing Your
           <div className="flex flex-wrap space-x-6 justify-center">
-            <span className="text-reveal-left">Dream Into</span>
-            <span className="text-green-400 text-reveal-right">Reality</span>
+            <span>Dream Into</span>
+            <span className="text-green-400"> Reality</span>
           </div>
         </h1>
-        <div className="lg:w-[50rem] md:w-[30rem] w-[20rem] lg:text-base md:text-lg text-sm font-extralight text-reveal-scale">
+        <div className="lg:w-[50rem] lg:text-xl lg:font-extralight w-96 text-xs font-semibold">
           <TextGenerateEffect words={words} />
+        </div>
+        <div className="flex justify-center items-center text-center space-x-10">
+        <div className="relative mt-5 inline-block text-lg group">
+          <div className="relative z-10 block h-10 w-72 overflow-hidden font-medium leading-tight text-black transition-colors duration-300 ease-out bg-white rounded-xl group-hover:text-white">
+            <div className="absolute inset-0 w-full h-full rounded-full"></div>
+            <div className="absolute left-0 w-96 h-96 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-black group-hover:-rotate-180 ease"></div>
+            <div className="relative mt-2 text-base font-normal">Contact Us</div>
+          </div>
+          <div className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear  rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></div>
+        </div>
+        <div className="relative mt-5 inline-block text-lg group">
+          <div className="relative z-10 block h-10 w-72 overflow-hidden font-medium leading-tight bg-black text-white transition-colors duration-300 ease-out rounded-xl group-hover:text-black">
+            <div className="absolute inset-0 w-full h-full rounded"></div>
+            <div className="absolute left-0 w-96 h-96 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-white group-hover:-rotate-180 ease"></div>
+            <div className="relative mt-2 text-base font-normal">Learn More</div>
+          </div>
+          <div className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear  rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></div>
+        </div>
         </div>
       </div>
     </section>
