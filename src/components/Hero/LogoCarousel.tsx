@@ -3,14 +3,6 @@ import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
-const imagePaths = [
-    { src: "/icons/boat.png", alt: "boat", width: 100, height: 40 },
-    { src: "/icons/audi.png", alt: "Audi", width: 100, height: 40 },
-    { src: "/icons/Disney+ Hotstar.png", alt: "Disney+ Hotstar", width: 240, height: 40 },
-    { src: "/icons/RoyalEnfield.png", alt: "RoyalEnfield", width: 200, height: 40 },
-    { src: "/icons/airbnb.png", alt: "Airbnb", width: 100, height: 40 },
-];
-
 const LogoCarousel = () => {
     const carouselRef = useRef<HTMLUListElement>(null);
     const controls = useAnimation();
@@ -18,14 +10,14 @@ const LogoCarousel = () => {
     useEffect(() => {
         if (carouselRef.current) {
             const carousel = carouselRef.current;
-            const totalWidth = carousel.scrollWidth / 2;
+            const totalWidth = carousel.scrollWidth / 2; // Since we have duplicated the icons, use half of scrollWidth
 
             controls.start({
                 x: [-totalWidth, 0],
                 transition: {
                     repeat: Infinity,
                     repeatType: 'loop',
-                    duration: 15,
+                    duration: 15, // Adjust the duration as needed for the scroll speed
                     ease: 'linear',
                 },
             });
@@ -45,16 +37,62 @@ const LogoCarousel = () => {
                             drag="x"
                             dragConstraints={{ left: 0, right: 0 }}
                         >
-                            {imagePaths.map((image, index) => (
-                                <li key={index}>
-                                    <Image className="h-10 w-auto" src={image.src} alt={image.alt} width={image.width} height={image.height} />
-                                </li>
-                            ))}
-                            {imagePaths.map((image, index) => (
-                                <li key={index + imagePaths.length}>
-                                    <Image className="h-10 w-auto" src={image.src} alt={image.alt} width={image.width} height={image.height} />
-                                </li>
-                            ))}
+                            {/* Icons */}
+                            <li>
+                                <Image className="h-10 w-auto" src="/icons/boat.png" alt="boat" width={100} height={40} />
+                            </li>
+                            <li>
+                                <Image className="h-10 w-auto" src="/icons/audi.png" alt="Audi" width={100} height={40} />
+                            </li>
+                            <li>
+                                <Image
+                                    className="h-24 w-auto"
+                                    src="/icons/Disney+ Hotstar.png"
+                                    alt="Disney+ Hotstar"
+                                    width={240}
+                                    height={40}
+                                />
+                            </li>
+                            <li>
+                                <Image
+                                    className="h-20 w-auto"
+                                    src="/icons/RoyalEnfield.png"
+                                    alt="RoyalEnfield"
+                                    width={200}
+                                    height={40}
+                                />
+                            </li>
+                            <li>
+                                <Image className="h-10 w-auto" src="/icons/airbnb.png" alt="Airbnb" width={100} height={40} />
+                            </li>
+                            {/* Duplicate the icons to create a seamless loop */}
+                            <li>
+                                <Image className="h-10 w-auto" src="/icons/boat.png" alt="boat" width={100} height={40} />
+                            </li>
+                            <li>
+                                <Image className="h-10 w-auto" src="/icons/audi.png" alt="Audi" width={100} height={40} />
+                            </li>
+                            <li>
+                                <Image
+                                    className="h-24 w-auto"
+                                    src="/icons/Disney+ Hotstar.png"
+                                    alt="Disney+ Hotstar"
+                                    width={240}
+                                    height={40}
+                                />
+                            </li>
+                            <li>
+                                <Image
+                                    className="h-20 w-auto"
+                                    src="/icons/RoyalEnfield.png"
+                                    alt="RoyalEnfield"
+                                    width={200}
+                                    height={40}
+                                />
+                            </li>
+                            <li>
+                                <Image className="h-10 w-auto" src="/icons/airbnb.png" alt="Airbnb" width={100} height={40} />
+                            </li>
                         </motion.ul>
                     </div>
                 </div>
