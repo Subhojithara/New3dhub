@@ -9,6 +9,7 @@ import MarketSize from "@/components/Hero/MarketSize";
 import SVGMaskAnimation from "@/components/Hero/SVGMaskAnimation";
 import Stats from "@/components/Hero/Stats";
 import StudyNumber from "@/components/Hero/StudyNumber";
+import ItemsStats from "@/components/Hero/ItemsStats";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <HeroSection />
       <LogoCarousel />
       <MoreBorder />
+      <ItemsStats />
       <Ripple />
       <SVGMaskAnimation />
       <ValueProp />

@@ -105,24 +105,6 @@ const HeroSection: React.FC = () => {
         <div className="lg:w-[50rem] lg:text-xl lg:font-extralight w-96 text-xs font-semibold">
           <TextGenerateEffect words={words} />
         </div>
-        <div className="flex justify-center items-center text-center space-x-10">
-        <div className="relative mt-5 inline-block text-lg group">
-          <div className="relative z-10 block h-10 w-72 overflow-hidden font-medium leading-tight text-black transition-colors duration-300 ease-out bg-white rounded-xl group-hover:text-white">
-            <div className="absolute inset-0 w-full h-full rounded-full"></div>
-            <div className="absolute left-0 w-96 h-96 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-black group-hover:-rotate-180 ease"></div>
-            <div className="relative mt-2 text-base font-normal">Contact Us</div>
-          </div>
-          <div className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear  rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></div>
-        </div>
-        <div className="relative mt-5 inline-block text-lg group">
-          <div className="relative z-10 block h-10 w-72 overflow-hidden font-medium leading-tight bg-black text-white transition-colors duration-300 ease-out rounded-xl group-hover:text-black">
-            <div className="absolute inset-0 w-full h-full rounded"></div>
-            <div className="absolute left-0 w-96 h-96 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-white group-hover:-rotate-180 ease"></div>
-            <div className="relative mt-2 text-base font-normal">Learn More</div>
-          </div>
-          <div className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear  rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></div>
-        </div>
-        </div>
       </div>
     </section>
   );

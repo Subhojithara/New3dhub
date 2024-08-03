@@ -12,7 +12,7 @@ const SVGMaskAnimation = () => {
         <section className={styles.section}>
           <video
             className={styles.video}
-            src="videos/video2.mp4"
+            src="videos/video 2.mp4"
             autoPlay
             loop
             muted
