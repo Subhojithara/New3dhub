@@ -7,6 +7,8 @@ import { TbReceiptRupee } from "react-icons/tb";
 import { AiFillSignal } from "react-icons/ai";
 import { LuBarChartBig } from "react-icons/lu";
 import { PiHandsClappingFill } from "react-icons/pi";
+import ScrollAnimatedText from '../ui/ScrollAnimatedText';
+import ScrollTextAnimation from '../ui/ScrollTextAnimation';
 
 const projects = [
   {
@@ -34,17 +36,40 @@ const projects = [
     description: "Consumer obsessed brands will experience highest engagement in the next upcoming years if their marketing, advertising and product-market fit goes all right",
     link: "https://amazon.com",
   },
+  {
+    icon: FaShoppingCart,
+    description: "India has the third-largest digital shopping base (600 million internet users and 185 million online shoppers)",
+    link: "https://stripe.com",
+  },
 ];
 
+const Line = "“Over 70% of purchases are influenced via well physical brand awareness and digital interactions from brands, consumers already know about.”"
+const Line2 = "Overall advertising impact is at high if the advertising starts with traditional & physical marketing and nudges the customers further via digital advertising."
+const Head = "STUDY TIME"
+
 function ItemsStats() {
+
   return (
     <div className="h-mini-screen">
       <div className="flex justify-center items-center">
-      <div className=" h-10 border border-black/40"></div>
+        <div className=" h-10 border border-black/40"></div>
       </div>
-    <div className="max-w-5xl mx-auto px-8">
-      <HoverEffect items={projects} />
-    </div>
+      <div className="max-w-5xl mx-auto px-8">
+        <HoverEffect items={projects} />
+      </div>
+      <div className="justify-center items-center font-black text-7xl">
+        <ScrollTextAnimation text={Head} />
+      </div>
+      <div className="flex justify-center items-center text-center text-4xl font-medium text-black">
+        <div className=" w-[60rem]">
+          <ScrollAnimatedText text={Line} />
+        </div>
+      </div>
+      <div className="flex justify-center items-center text-center text-4xl font-medium text-black">
+        <div className=" w-[70rem]">
+          <ScrollAnimatedText text={Line2} />
+        </div>
+      </div>
     </div>
   );
 }

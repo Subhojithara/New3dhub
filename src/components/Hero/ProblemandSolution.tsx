@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MarketSize: React.FC = () => {
+const ProblemandSolution: React.FC = () => {
   const [isAfter, setIsAfter] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -94,14 +94,14 @@ const MarketSize: React.FC = () => {
               className={`py-2 px-4 rounded-l-full border cursor-pointer transform transition-transform ${!isAfter ? 'border-2 bg-black text-white duration-200 hover:scale-110' : 'bg-white/5  text-gray-500 duration-200 hover:scale-110'}`}
               onClick={() => handleButtonClick(false)}
             >
-              Before
+              PROBLEM
             </div>
             <div
               ref={buttonAfterRef}
               className={`py-2 px-4 rounded-r-full border cursor-pointer transform transition-transform ${isAfter ? 'border-2 bg-black text-white duration-200 hover:scale-110' : 'bg-white/5  text-gray-500 duration-200 hover:scale-110'}`}
               onClick={() => handleButtonClick(true)}
             >
-              After
+              SOLUTION
             </div>
           </div>
         </div>
@@ -113,17 +113,9 @@ const MarketSize: React.FC = () => {
             ? 'After content: Discover a new way to experience our service.'
             : 'Before content: Experience the best service with us.'}
         </p>
-        <div className="relative inline-block text-lg group">
-          <div className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <div className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></div>
-            <div className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></div>
-            <div className="relative">Contact Us!</div>
-          </div>
-          <div className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></div>
-        </div>
       </div>
     </div>
   );
 }
 
-export default MarketSize;
+export default ProblemandSolution;

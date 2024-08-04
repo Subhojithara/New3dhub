@@ -26,7 +26,7 @@ const LogoCarousel = () => {
 
     return (
         <div className="relative h-40 flex flex-col justify-center overflow-hidden">
-            <div className="w-full max-w-5xl mx-auto px-4 md:px-6 py-24">
+            <div className="w-full max-w-7xl mx-auto px-4 md:px-6 py-24">
                 <div className="text-center">
                     <div className="w-full inline-flex flex-nowrap overflow-hidden">
                         <motion.ul
