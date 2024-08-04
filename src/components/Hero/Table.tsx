@@ -61,32 +61,6 @@ const Table = () => {
         }
       );
     });
-
-    const cells = tableRef.current!.querySelectorAll('.cell');
-    cells.forEach((cell) => {
-      cell.addEventListener('mouseenter', () => {
-        gsap.to(cell, {
-          scale: 1.1,
-          x: 10,
-          y: -10,
-          
-          background: 'linear-gradient(135deg, #f0f4f8, #e0e7ff)',
-          boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
-          ease: 'power1.inOut',
-        });
-      });
-      cell.addEventListener('mouseleave', () => {
-        gsap.to(cell, {
-          scale: 1,
-          x: 0,
-          y: 0,
-          
-          background: '#ffffff',
-          boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-          ease: 'power1.inOut',
-        });
-      });
-    });
   }, []);
 
   const renderList = (items: string[]) => (
@@ -100,7 +74,7 @@ const Table = () => {
   return (
     <div ref={tableRef} className="container mx-auto p-6">
       <div className="table w-full">
-        <div className="row flex  bg-gray-200 text-lg">
+        <div className="row flex rounded-full bg-gray-200 text-lg">
           <div className="cell w-1/2 p-6 font-semibold text-center text-2xl uppercase">Digital Marketing</div>
           <div className="cell w-1/2 p-6 font-semibold text-center text-2xl uppercase">Traditional Marketing</div>
         </div>
@@ -130,3 +104,5 @@ const Table = () => {
 };
 
 export default Table;
+
+

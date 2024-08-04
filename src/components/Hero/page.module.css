@@ -28,8 +28,3 @@
   overflow: hidden;
 }
 
-.vignette img {
-  width: 100%;
-  height: 100%; /* Ensure image covers the container */
-  object-fit: cover;
-}
