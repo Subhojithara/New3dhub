@@ -11,7 +11,7 @@ import Stats from "@/components/Hero/Stats";
 import StudyNumber from "@/components/Hero/StudyNumber";
 import ItemsStats from "@/components/Hero/ItemsStats";
 import StretchingSection from "@/components/Hero/StretchingSection";
-import { CardSpotlight2 } from "@/components/Hero/CardSpotlight";
+import Table from "@/components/Hero/Table";
 
 
 
@@ -23,7 +23,7 @@ export default function Home() {
       <MoreBorder />
       <ItemsStats />
       <Ripple />
-      <CardSpotlight2 />
+      <Table />
       <ValueProp />
       <StretchingSection />
       <ProblemandSolution />
