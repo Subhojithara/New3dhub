@@ -102,7 +102,7 @@ const HeroSection: React.FC = () => {
             <span className="text-green-400"> Reality</span>
           </div>
         </h1>
-        <div className="lg:w-[50rem] lg:text-xl lg:font-extralight w-96 text-xs font-semibold">
+        <div className="lg:w-[50rem] lg:text-xl lg:font-extralight w-96 text-xs font-semibold text-white">
           <TextGenerateEffect words={words} />
         </div>
       </div>

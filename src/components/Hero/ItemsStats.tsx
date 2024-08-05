@@ -61,7 +61,7 @@ function ItemsStats() {
         <ScrollTextAnimation text={Head} />
       </div>
       <div className="flex justify-center items-center text-center text-4xl font-medium text-black">
-        <div className=" w-[60rem]">
+        <div className="w-[60rem]">
           <ScrollAnimatedText text={Line} />
         </div>
       </div>

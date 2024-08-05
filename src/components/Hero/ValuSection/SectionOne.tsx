@@ -4,15 +4,10 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Home.module.css';
-import AnimatedText from '@/components/ui/AnimatedText';
-
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SectionOne: React.FC = () => {
-
-  const phrase = "Though the growth for both B2C & D2C is at it’s peak.";
-
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -63,16 +58,12 @@ const SectionOne: React.FC = () => {
         <div className="space-y-1">
           <div className="w-0 h-0 border-l-[50px] border-l-transparent border-t-[75px] border-t-orange-100 border-r-[50px] border-r-transparent rotating-element duration-500 hover:scale-110"></div>
           <div className="w-96 h-14 bg-gradient-to-r text-white from-yellow-500 via-yellow-300 to-yellow-100 -rotate-4 flex text-center justify-center text-4xl items-center font-['Bebas_Neue'] rounded-xl shadow-xl hover-element duration-500 hover:scale-110">
-            <h1>Lorem ipsum dolor sit.</h1>
+            <h1>Lorem ipsum dolor sit amet</h1>
           </div>
           <div className="w-96 h-14 bg-gradient-to-r text-white from-orange-500 via-orange-300 to-orange-100 -rotate-2 flex text-center justify-center text-4xl items-center font-['Bebas_Neue'] rounded-xl shadow-xl hover-element duration-500 hover:scale-110">
-            <h1>Lorem ipsum dolor sit.</h1>
+            <h1>Lorem ipsum dolor sit amet</h1>
           </div>
-          <div className="flex justify-center items-center text-3xl">
-        <div className="w-[40rem] mt-10 font-black font-['Montserrat']">
-        <AnimatedText text={phrase} />
-        </div>
-      </div>
+          <p className="pt-10 w-[40rem] text-4xl font-semibold hover-element duration-500 hover:scale-110 reveal-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, quam error exercitationem aliquam illo nihil.</p>
         </div>
         <div className="h-96 w-96 rounded-full bg-gradient-to-r from-orange-500 via-orange-300 to-orange-100 rotating-element">
           <div className="h-20 w-20 rounded-full bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-100"></div>

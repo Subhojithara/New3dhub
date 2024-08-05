@@ -64,21 +64,21 @@ const Table = () => {
   }, []);
 
   const renderList = (items: string[]) => (
-    <ul className="list-disc pl-6 mt-4">
+    <ul className="list-disc pl-6 mt-4 space-y-2">
       {items.map((item, index) => (
-        <li key={index}>{item}</li>
+        <li key={index} className="hover:text-yellow-400 transition-colors duration-300 ">{item}</li>
       ))}
     </ul>
   );
 
   return (
     <div ref={tableRef} className="container mx-auto p-6">
-      <div className="table w-full">
-        <div className="row flex rounded-full bg-gray-200 text-lg">
+      <div className="table w-full space-y-6">
+        <div className="row flex bg-white rounded-full text-lg border">
           <div className="cell w-1/2 p-6 font-semibold text-center text-2xl uppercase">Digital Marketing</div>
           <div className="cell w-1/2 p-6 font-semibold text-center text-2xl uppercase">Traditional Marketing</div>
         </div>
-        <div className="row flex border-b">
+        <div className="row flex bg-white border rounded-2xl">
           <div className="cell w-1/2 p-6">
             <strong>Pros</strong>
             {renderList(points.digital.pros)}
@@ -88,7 +88,7 @@ const Table = () => {
             {renderList(points.traditional.pros)}
           </div>
         </div>
-        <div className="row flex">
+        <div className="row flex bg-white border rounded-2xl">
           <div className="cell w-1/2 p-6">
             <strong>Cons</strong>
             {renderList(points.digital.cons)}
@@ -104,5 +104,3 @@ const Table = () => {
 };
 
 export default Table;
-
-
