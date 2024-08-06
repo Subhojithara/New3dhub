@@ -70,15 +70,15 @@ const Aboutus: React.FC = () => {
   return (
     <div className="min-h-screen w-full">
       <div className="relative">
-        <div className="flex absolute right-20 top-40">
+        <div className="flex absolute right-20 top-5">
 
-          <div className="w-96 text-base bg-orange-400 absolute -top-1 -right-1 text-white p-8 rounded-xl duration-500 hover:bg-black hover:scale-110 hover:-rotate-2">
+          <div className="w-[26rem] h-[40rem] text-[1.32rem] font-thin bg-cyan-950 absolute -top-1 -right-1 text-white p-8 rounded-xl duration-500 hover:bg-black hover:scale-110 hover:-rotate-2">
             <TextGenerateEffect words={words} />
             <TextGenerateEffect words={words2} />
           </div>
 
         </div>
-        <div className="face absolute top-5 left-52 w-[40rem] h-[40rem] bg-cyan-600 rounded-full flex justify-center items-center duration-500 hover:bg-orange-300 hover:scale-110 hover:rotate-6">
+        <div className="face absolute top-5 left-52 w-[40rem] h-[40rem] bg-gradient-to-br from-cyan-400 via-cyan-300 to-cyan-100 rounded flex justify-center items-center">
         <div className="face absolute w-[56rem] h-[22.5rem] bg-green-200 rounded-full flex justify-center items-center space-x-10 shadow-xl">
           <Link href="/" passHref>
             <div ref={leftEyeRef} className="eye h-64 w-64 bg-white rounded-full flex justify-center items-center relative cursor-pointer">

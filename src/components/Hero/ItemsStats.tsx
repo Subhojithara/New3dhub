@@ -63,10 +63,6 @@ function ItemsStats() {
       <div className="flex justify-center items-center text-center text-4xl font-medium text-black">
         <div className="w-[60rem]">
           <ScrollAnimatedText text={Line} />
-        </div>
-      </div>
-      <div className="flex justify-center items-center text-center text-4xl font-medium text-black">
-        <div className=" w-[70rem]">
           <ScrollAnimatedText text={Line2} />
         </div>
       </div>

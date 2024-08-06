@@ -15,6 +15,7 @@ import CursorAnimation from "@/components/Cursor";
 import Aboutus from "@/components/Hero/Aboutus";
 import { Chart } from "@/components/Hero/Charts";
 import { SplitScreen } from "@/components/Hero/SplitScreen";
+import SvgProses from "@/components/Hero/ValuSection/SvgProses";
 
 
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
       <Ripple />
       <ValueProp />
       <Aboutus />
-      <ProblemandSolution />
+      <SvgProses />
       <OurProses />
       <Footer />
     </div>
