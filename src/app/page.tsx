@@ -13,9 +13,9 @@ import StretchingSection from "@/components/Hero/StretchingSection";
 import Table from "@/components/Hero/Table";
 import CursorAnimation from "@/components/Cursor";
 import Aboutus from "@/components/Hero/Aboutus";
-import { Chart } from "@/components/Hero/Charts";
 import { SplitScreen } from "@/components/Hero/SplitScreen";
 import SvgProses from "@/components/Hero/ValuSection/SvgProses";
+import OurGoal from "@/components/Hero/OurGoal";
 
 
 export default function Home() {
@@ -28,9 +28,9 @@ export default function Home() {
       <ItemsStats />
       <SplitScreen />
       <Table />
-      <Ripple />
       <ValueProp />
       <Aboutus />
+      <OurGoal />
       <SvgProses />
       <OurProses />
       <Footer />

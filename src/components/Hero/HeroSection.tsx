@@ -1,113 +1,132 @@
 "use client";
 
 import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import { TextGenerateEffect } from "../ui/text-generate-effect";
+import Link from 'next/link';
+import { gsap } from 'gsap';
+import { BackgroundBeams } from '../ui/background-beams';
 
-const words = `We help Brands leverage traditional advertising through the biggest festivals of India, using modern-day creative strategies that impact and drive customer loyalty`;
-
-const HeroSection: React.FC = () => {
-  const mountRef = useRef<HTMLDivElement>(null);
+const HeroSection = () => {
+  const leftEyeRef = useRef<HTMLDivElement>(null);
+  const rightEyeRef = useRef<HTMLDivElement>(null);
+  const eyeballSize = 100;
+  const eyeSize = 200;
+  const eyeballRadius = eyeballSize / 2;
+  const eyeRadius = eyeSize / 2;
+  const maxMove = eyeRadius - eyeballRadius;
 
   useEffect(() => {
-    const currentMountRef = mountRef.current;
+    const handleMouseMove = (event: MouseEvent) => {
+      const { clientX, clientY } = event;
 
-    const vertexShader = `
-      precision mediump float;
+      [leftEyeRef.current, rightEyeRef.current].forEach((eye) => {
+        if (eye) {
+          const { left, top } = eye.getBoundingClientRect();
+          const eyeCenterX = left + eyeRadius;
+          const eyeCenterY = top + eyeRadius;
 
-      uniform float uTime;
+          const deltaX = clientX - eyeCenterX;
+          const deltaY = clientY - eyeCenterY;
+          const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+          const maxDistance = Math.min(maxMove, distance);
 
-      varying vec2 vUv;
+          const angle = Math.atan2(deltaY, deltaX);
+          const moveX = Math.cos(angle) * maxDistance;
+          const moveY = Math.sin(angle) * maxDistance;
 
-      void main() {
-        vUv = uv;
-        vec3 pos = position;
-        float dist = distance(uv, vec2(0.5, 0.5));
-        pos.z += sin(uv.x * 10.0 + uTime) * 0.5;
-        pos.z += sin(uv.y * 10.0 + uTime) * 0.5;
-        pos.z += (1.0 - dist) * 2.0;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
-      }
-    `;
+          const eyeball = eye.querySelector('.eyeball') as HTMLDivElement;
+          if (eyeball) {
+            gsap.to(eyeball, {
+              x: moveX,
+              y: moveY,
+              ease: "elastic.out(1, 0.3)",
+              duration: 0.5
+            });
 
-    const fragmentShader = `
-      precision mediump float;
-
-      uniform float uTime;
-
-      varying vec2 vUv;
-
-      void main() {
-        vec3 color = vec3(0.95);
-        float x = vUv.x + uTime * 0.1;
-        float y = vUv.y + uTime * 0.1;
-
-        color.r = sin(x * 10.0) * 0.5 + 0.5;
-        color.g = sin(y * 10.0) * 0.5 + 0.5;
-        color.b = sin((x + y) * 10.0) * 0.5 + 0.5;
-
-        gl_FragColor = vec4(color * 0.8 + 0.2, 1.0);
-      }
-    `;
-
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 5;
-
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setClearColor(0xf9f9f9, 1);
-    if (currentMountRef) {
-      currentMountRef.appendChild(renderer.domElement);
-    }
-
-    const geometry = new THREE.SphereGeometry(5, 64, 64);
-    const material = new THREE.ShaderMaterial({
-      vertexShader,
-      fragmentShader,
-      uniforms: {
-        uTime: { value: 0 },
-      },
-      side: THREE.DoubleSide,
-      transparent: true,
-    });
-
-    const sphere = new THREE.Mesh(geometry, material);
-    scene.add(sphere);
-
-    const animate = () => {
-      material.uniforms.uTime.value += 0.01;
-      renderer.render(scene, camera);
-      requestAnimationFrame(animate);
+            const eyedot = eyeball.querySelector('.eyedot') as HTMLDivElement;
+            const eyedotX = Math.cos(angle) * (eyeballRadius - 5); // Adjust the offset as needed
+            const eyedotY = Math.sin(angle) * (eyeballRadius - 5); // Adjust the offset as needed
+            if (eyedot) {
+              gsap.to(eyedot, {
+                x: eyedotX,
+                y: eyedotY,
+                ease: "elastic.out(1, 0.3)",
+                duration: 0.5
+              });
+            }
+          }
+        }
+      });
     };
 
-    animate();
+    document.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      if (currentMountRef) {
-        currentMountRef.removeChild(renderer.domElement);
-      }
+      document.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  }, [eyeRadius, maxMove]);
 
   return (
-    <section className="relative flex justify-center items-center lg:min-h-screen h-[40rem] mx-auto w-screen bg-white">
-      <div ref={mountRef} className="absolute top-0 left-0 w-full h-full blur-3xl"></div>
-      <div className="relative z-10 flex flex-col justify-center items-center text-center p-4">
-        <h1 className="lg:text-8xl text-4xl font-bold leading-tight text-white">
-          Bringing Your
-          <div className="flex flex-wrap space-x-6 justify-center">
-            <span>Dream Into</span>
-            <span className="text-green-400"> Reality</span>
+    <div className="min-h-screen">
+      <BackgroundBeams />
+      <div className="flex flex-col items-center lg:flex-row lg:items-start lg:justify-between lg:min-h-screen">
+        <div className="mt-20 lg:mt-40 px-4 text-center lg:text-left">
+          <div className="pb-2">
+            <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-black inline-block">
+              <span className="absolute inset-0 overflow-hidden rounded-full">
+                <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+              </span>
+              <div className="relative flex space-x-2 items-center z-10 rounded-full bg-white py-0.5 px-4 ring-1 ring-white/10">
+                <span>{`More about us`}</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    d="M10.75 8.75L14.25 12L10.75 15.25"
+                  ></path>
+                </svg>
+              </div>
+              <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
+            </button>
           </div>
-        </h1>
-        <div className="lg:w-[50rem] lg:text-xl lg:font-extralight w-96 text-xs font-semibold text-white">
-          <TextGenerateEffect words={words} />
+          <h1 className="w-full lg:w-[42rem] text-4xl lg:text-6xl font-black uppercase font-['Oswald']">Make Your Brand Remembered, Traditional Marketing Done Right 🚀</h1>
+          <p className="pt-4 w-full lg:w-[40rem]">We help Brands leverage traditional advertising through the biggest festivals of India, using modern-day creative strategies that impact and drive customer loyalty.</p>
+          <div className="pt-4 flex justify-center lg:justify-start">
+            <button className="border h-14 w-60 border-black rounded-xl">
+              Contact Us
+            </button>
+          </div>
+        </div>
+        <div className="mt-16 lg:mt-5 flex justify-center lg:absolute lg:top-5 lg:right-0">
+          <div className="face w-60 h-60 lg:w-[40rem] lg:h-[40rem] bg-gradient-to-br rounded-s-full from-cyan-400 via-cyan-300 to-cyan-100 flex justify-center items-center">
+            <div className="face absolute w-80 h-40 lg:w-[56rem] lg:h-[22.5rem] bg-green-200 rounded-full flex justify-center items-center space-x-10 shadow-xl">
+              <Link href="/" passHref>
+                <div ref={leftEyeRef} className="eye h-24 w-24 lg:h-64 lg:w-64 bg-white rounded-full flex justify-center items-center relative cursor-pointer">
+                  <div className="eyeball h-12 w-12 lg:h-32 lg:w-32 bg-black rounded-full flex justify-center items-center relative">
+                    <div className="eyedot h-2 w-2 lg:h-5 lg:w-5 bg-white rounded-full absolute"></div>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/" passHref>
+                <div ref={rightEyeRef} className="eye h-24 w-24 lg:h-64 lg:w-64 bg-white rounded-full flex justify-center items-center relative cursor-pointer">
+                  <div className="eyeball h-12 w-12 lg:h-32 lg:w-32 bg-black rounded-full flex justify-center items-center relative">
+                    <div className="eyedot h-2 w-2 lg:h-5 lg:w-5 bg-white rounded-full absolute"></div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
+}
 
 export default HeroSection;

@@ -68,35 +68,33 @@ const Aboutus: React.FC = () => {
   }, [eyeRadius, maxMove]);
 
   return (
-    <div className="min-h-screen w-full">
-      <div className="relative">
-        <div className="flex absolute right-20 top-5">
-
-          <div className="w-[26rem] h-[40rem] text-[1.32rem] font-thin bg-cyan-950 absolute -top-1 -right-1 text-white p-8 rounded-xl duration-500 hover:bg-black hover:scale-110 hover:-rotate-2">
+    <div className="min-h-screen w-full p-4 md:p-8">
+      <div className="relative flex flex-col items-center">
+        <div className="flex flex-col md:flex-row items-center md:items-start">
+          <div className="w-full md:w-[26rem] md:h-[40rem] text-[1.32rem] font-thin bg-cyan-950 text-white absolute top-0 right-0 p-8 rounded-xl duration-500 hover:bg-black hover:scale-110 hover:-rotate-2">
             <TextGenerateEffect words={words} />
             <TextGenerateEffect words={words2} />
           </div>
-
         </div>
-        <div className="face absolute top-5 left-52 w-[40rem] h-[40rem] bg-gradient-to-br from-cyan-400 via-cyan-300 to-cyan-100 rounded flex justify-center items-center">
-        <div className="face absolute w-[56rem] h-[22.5rem] bg-green-200 rounded-full flex justify-center items-center space-x-10 shadow-xl">
-          <Link href="/" passHref>
-            <div ref={leftEyeRef} className="eye h-64 w-64 bg-white rounded-full flex justify-center items-center relative cursor-pointer">
-              <div className="eyeball h-32 w-32 bg-black rounded-full flex justify-center items-center relative">
-                <span className="text-center text-xs uppercase text-white">About</span>
-                <div className="eyedot h-5 w-5 bg-white rounded-full absolute"></div>
-              </div>
+        <div className="lg:mt-0 mt-[44rem] lg:absolute lg:top-0 lg:left-40">
+          <div className="face w-60 h-60 lg:w-[40rem] lg:h-[40rem] bg-gradient-to-br lg:rounded rounded-full from-cyan-400 via-cyan-300 to-cyan-100 flex justify-center items-center">
+            <div className="face absolute w-80 h-40 lg:w-[56rem] lg:h-[22.5rem] bg-green-200 rounded-full flex justify-center items-center space-x-10 shadow-xl">
+              <Link href="/" passHref>
+                <div ref={leftEyeRef} className="eye h-24 w-24 lg:h-64 lg:w-64 bg-white rounded-full flex justify-center items-center relative cursor-pointer">
+                  <div className="eyeball h-12 w-12 lg:h-32 lg:w-32 bg-black rounded-full flex justify-center items-center relative">
+                    <div className="eyedot h-2 w-2 lg:h-5 lg:w-5 bg-white rounded-full absolute"></div>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/" passHref>
+                <div ref={rightEyeRef} className="eye h-24 w-24 lg:h-64 lg:w-64 bg-white rounded-full flex justify-center items-center relative cursor-pointer">
+                  <div className="eyeball h-12 w-12 lg:h-32 lg:w-32 bg-black rounded-full flex justify-center items-center relative">
+                    <div className="eyedot h-2 w-2 lg:h-5 lg:w-5 bg-white rounded-full absolute"></div>
+                  </div>
+                </div>
+              </Link>
             </div>
-          </Link>
-          <Link href="/" passHref>
-            <div ref={rightEyeRef} className="eye h-64 w-64 bg-white rounded-full flex justify-center items-center relative cursor-pointer">
-              <div className="eyeball h-32 w-32 bg-black rounded-full flex justify-center items-center relative">
-                <span className="text-center text-xs uppercase text-white">About</span>
-                <div className="eyedot h-5 w-5 bg-white rounded-full absolute"></div>
-              </div>
-            </div>
-          </Link>
-        </div>
+          </div>
         </div>
       </div>
     </div>

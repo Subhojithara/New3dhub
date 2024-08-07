@@ -57,7 +57,7 @@ function ItemsStats() {
       <div className="max-w-5xl mx-auto px-8">
         <HoverEffect items={projects} />
       </div>
-      <div className="justify-center items-center font-black text-7xl">
+      <div className="justify-center items-center font-black text-center lg:text-7xl text-2xl">
         <ScrollTextAnimation text={Head} />
       </div>
       <div className="flex justify-center items-center text-center text-4xl font-medium text-black">
