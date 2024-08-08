@@ -229,3 +229,33 @@ body::-webkit-scrollbar-thumb:hover {
 .company-icon:nth-child(3) {
   left: 80%;
 }
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 8px;
+  height: 8px;
+}
+
+.circle {
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.circle-hover {
+  transform: scale(2) !important;
+}
+

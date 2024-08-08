@@ -36,8 +36,17 @@ function Navbar({ className }: { className?: string }) {
             )}
         >
             <Menu setActive={setActive}>
-                <Link href={"/home"}>
+                <Link href={"/"}>
                     <MenuItem setActive={setActive} active={active} item="Home" />
+                </Link>
+                <Link href={"/About"}>
+                    <MenuItem setActive={setActive} active={active} item="About" />
+                </Link>
+                <Link href={"/Nothing"}>
+                    <MenuItem setActive={setActive} active={active} item="Nothing" />
+                </Link>
+                <Link href={"/Contact"}>
+                    <MenuItem setActive={setActive} active={active} item="Contact" />
                 </Link>
             </Menu>
         </div>

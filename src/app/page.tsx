@@ -16,6 +16,8 @@ import Aboutus from "@/components/Hero/Aboutus";
 import { SplitScreen } from "@/components/Hero/SplitScreen";
 import SvgProses from "@/components/Hero/ValuSection/SvgProses";
 import OurGoal from "@/components/Hero/OurGoal";
+import Compair from "@/components/Compair";
+
 
 
 export default function Home() {
@@ -27,11 +29,12 @@ export default function Home() {
       <MoreBorder />
       <ItemsStats />
       <SplitScreen />
-      <Table />
+      <Compair />
       <ValueProp />
       <Aboutus />
       <OurGoal />
       <SvgProses />
+      <StretchingSection />
       <OurProses />
       <Footer />
     </div>
