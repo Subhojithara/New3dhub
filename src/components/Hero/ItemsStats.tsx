@@ -9,6 +9,7 @@ import { LuBarChartBig } from "react-icons/lu";
 import { PiHandsClappingFill } from "react-icons/pi";
 import ScrollAnimatedText from '../ui/ScrollAnimatedText';
 import ScrollTextAnimation from '../ui/ScrollTextAnimation';
+import RotatingElements from '../ui/RotatingElements';
 
 const projects = [
   {
@@ -43,12 +44,11 @@ const projects = [
   },
 ];
 
-const Line = "“Over 70% of purchases are influenced via well physical brand awareness and digital interactions from brands, consumers already know about.”"
+const Line = "“Over 70% of purchases are influenced via well physical brand awareness and digital interactions from brands, consumers already know about.” Overall advertising impact is at high if the advertising starts with traditional & physical marketing and nudges the customers further via digital advertising."
 const Line2 = "Overall advertising impact is at high if the advertising starts with traditional & physical marketing and nudges the customers further via digital advertising."
 const Head = "STUDY TIME"
 
 function ItemsStats() {
-
   return (
     <div className="h-mini-screen">
       <div className="flex justify-center items-center">
@@ -60,14 +60,14 @@ function ItemsStats() {
       <div className="justify-center items-center font-black text-center lg:text-7xl text-2xl">
         <ScrollTextAnimation text={Head} />
       </div>
-      <div className="flex justify-center items-center text-center text-4xl font-medium text-black">
-        <div className="w-[60rem]">
+      <div className="flex justify-center items-center text-center lg:text-4xl text-xl font-normal lg:font-medium p-2 text-black">
+        <div className="w-[80rem]">
           <ScrollAnimatedText text={Line} />
-          <ScrollAnimatedText text={Line2} />
         </div>
       </div>
     </div>
   );
 }
+
 
 export default ItemsStats;

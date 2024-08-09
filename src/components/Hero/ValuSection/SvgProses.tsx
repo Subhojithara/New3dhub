@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import RotatingElements from "@/components/ui/RotatingElements";
 
 
 gsap.registerPlugin(ScrollTrigger);

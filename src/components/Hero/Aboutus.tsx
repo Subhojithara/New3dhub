@@ -72,8 +72,8 @@ const Aboutus: React.FC = () => {
       <div className="relative flex flex-col items-center">
         <div className="flex flex-col md:flex-row items-center md:items-start">
           <div className="w-full md:w-[26rem] md:h-[40rem] text-[1.32rem] font-thin bg-cyan-950 text-white absolute top-0 right-0 p-8 rounded-xl duration-500 hover:bg-black hover:scale-110 hover:-rotate-2">
-            <TextGenerateEffect words={words} />
-            <TextGenerateEffect words={words2} />
+            {words}
+            {words2}
           </div>
         </div>
         <div className="lg:mt-0 mt-[44rem] lg:absolute lg:top-0 lg:left-40">

@@ -16,14 +16,13 @@ import Aboutus from "@/components/Hero/Aboutus";
 import { SplitScreen } from "@/components/Hero/SplitScreen";
 import SvgProses from "@/components/Hero/ValuSection/SvgProses";
 import OurGoal from "@/components/Hero/OurGoal";
-import Compair from "@/components/Compair";
+import Compair from "@/components/Hero/Compair";
 
 
 
 export default function Home() {
   return (
     <div className="bg-white text-black">
-      <CursorAnimation />
       <HeroSection />
       <LogoCarousel />
       <MoreBorder />

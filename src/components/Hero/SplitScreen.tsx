@@ -14,7 +14,7 @@ const content = [
           src="/image/editing.jpg"
           width={300}
           height={300}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover glossy"
           alt="THE BIG PROBLEM 💢"
         />
       </div>
@@ -30,7 +30,7 @@ const content = [
           src="/image/changes.jpg"
           width={300}
           height={300}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover glossy"
           alt="THE SOLUTION"
         />
       </div>

@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import RotatingElements from './RotatingElements';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,6 +54,7 @@ const ScrollAnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
   return (
     <div ref={container} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <div>
+      <RotatingElements />
         {splitWords(text)}
       </div>
     </div>

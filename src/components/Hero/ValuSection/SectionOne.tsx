@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Home.module.css';
+import RotatingElements from '@/components/ui/RotatingElements';
 
 gsap.registerPlugin(ScrollTrigger);
 
