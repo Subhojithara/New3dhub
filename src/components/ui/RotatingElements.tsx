@@ -60,7 +60,7 @@ const RotatingElements: React.FC = () => {
         ref={flowerRef}
         className="flower w-80 h-60 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 rounded-full glossy"
       >
-        <div className="h-40 w-40 bg-gradient-to-r from-blue-300 via-blue-200 to-blue-100  rounded-full shadow-lg"></div>
+        <div className="h-40 w-40 bg-gradient-to-r from-blue-300 via-blue-200 to-blue-100 rounded-full shadow-lg"></div>
       </div>
       <div
         ref={sunRef}

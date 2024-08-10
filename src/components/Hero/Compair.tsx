@@ -85,20 +85,20 @@ const Compair = () => {
       <div className="sticky top-0 z-10 flex flex-col md:flex-row justify-center items-center md:space-x-60 bg-white/25 backdrop-blur-lg py-6 px-10 w-full">
         <div className="flex flex-col items-center space-y-4 icon-container hover:cursor-pointer">
           <FaDigitalOcean size={50} className="text-blue-600 h-14 shadow-lg w-14 p-2 rounded-full border-2" />
-          <h2 className="text-2xl font-bold uppercase">Digital Marketing</h2>
+          <h2 className="text-2xl font-black uppercase">Digital Marketing</h2>
         </div>
         <div className="flex flex-col items-center space-y-4 icon-container hover:cursor-pointer mt-4 md:mt-0">
           <FaBullhorn size={50} className="text-red-600 h-14 shadow-lg w-14 p-2 rounded-full border-2" />
-          <h2 className="text-2xl font-bold uppercase">Traditional Marketing</h2>
+          <h2 className="text-2xl font-black uppercase">Traditional Marketing</h2>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col md:flex-row justify-between items-start w-4/5 reveal-container mt-2 rounded-xl bg-slate-200">
+      <div className="flex flex-col md:flex-row justify-between items-start w-4/5 reveal-container mt-2 rounded-xl hover:scale-110 duration-1000  bg-gradient-to-r from-blue-300 via-blue-200 to-blue-100 ">
         {/* Digital Marketing */}
         <div className="w-full md:w-1/2 p-5 md:p-10 flex flex-col items-center">
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold reveal-left">Pros of Digital:</h3>
+            <h3 className="text-xl font-black reveal-left text-white">Pros of Digital:</h3>
             <ul className="list-disc pl-5 space-y-2 reveal-left">
               <li>Extremely targeted</li>
               <li>Intent based</li>
@@ -106,7 +106,7 @@ const Compair = () => {
               <li>Scalable once gets good results</li>
             </ul>
 
-            <h3 className="text-xl font-semibold reveal-left">Cons of Digital:</h3>
+            <h3 className="text-xl font-black reveal-left text-white">Cons of Digital:</h3>
             <ul className="list-disc pl-5 space-y-2 reveal-left">
               <li>Insanely expensive (if not done right)</li>
               <li>Can’t target 61% of the market</li>
@@ -119,7 +119,7 @@ const Compair = () => {
         {/* Traditional Marketing */}
         <div className="w-full md:w-1/2 p-5 md:p-10 flex flex-col items-center">
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold reveal-right">Pros of Traditional:</h3>
+            <h3 className="text-xl font-black reveal-right text-white">Pros of Traditional:</h3>
             <ul className="list-disc pl-5 space-y-2 reveal-right">
               <li>Most cost effective (if done right)</li>
               <li>Able to target the whole market + the untapped 61%</li>
@@ -127,7 +127,7 @@ const Compair = () => {
               <li>Fastest to implement and get traction</li>
             </ul>
 
-            <h3 className="text-xl font-semibold reveal-right">Cons of Traditional:</h3>
+            <h3 className="text-xl font-black reveal-right text-white">Cons of Traditional:</h3>
             <ul className="list-disc pl-5 space-y-2 reveal-right">
               <li>Doesn’t work for highly targeted audience</li>
               <li>Doesn’t work based on intent triggers</li>

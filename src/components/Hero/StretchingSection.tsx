@@ -21,7 +21,7 @@ const StretchingSection = () => {
         { scaleY: 1, background: '#fff' },
         {
           scaleY: 5,
-          background: '#000',
+          background: '#040D12',
           ease: 'none',
           scrollTrigger: {
             trigger: section,
@@ -53,7 +53,7 @@ const StretchingSection = () => {
 
   return (
     <div ref={sectionRef} className="h-screen flex justify-center overflow-hidden items-center">
-      <h1 ref={textRef} className="text-6xl font-black text-center justify-center items-center uppercase font-['Montserrat'] w-1/2">this is the time to know who we are</h1>
+      <h1 ref={textRef} className="text-6xl font-black text-center justify-center items-center uppercase font-['Montserrat'] w-1/2"></h1>
     </div>
   );
 };

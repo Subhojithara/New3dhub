@@ -285,3 +285,14 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translate(50%, 50%) rotate(45deg);
   }
 }
+
+:root {
+  --gray-700: #424242;
+  --gray-500: #737373;
+  --gray-800: #292929;
+  --gray-400: #a3a3a3;
+  --gray-100: whitesmoke;
+  --green: #61ffc9;
+  --border-radius--medium: 1.25rem;
+  --border-radius--button-circle: 100vw;
+}
