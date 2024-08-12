@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { gsap, Expo, ScrollTrigger } from "gsap/all";
+import Link from 'next/link';
 import "./navbar.scss";
 
 const Navbar: React.FC = () => {
@@ -14,10 +15,10 @@ const Navbar: React.FC = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     const showAnim = gsap.from(bigScreenNavbarRef.current, {
-      yPercent: -200, // Move the navbar further up
+      yPercent: -200,
       paused: true,
-      duration: 0.5, // Slow down the animation
-      ease: "power2.out", // Use a smooth easing function
+      duration: 0.5,
+      ease: "power2.out",
     }).progress(1);
 
     ScrollTrigger.create({
@@ -97,21 +98,22 @@ const Navbar: React.FC = () => {
         ref={bigScreenNavbarRef}
         className="main-tool-bar navbar big-screen hidden lg:flex text-black font-normal space-x-10 fixed top-8 bg-white/10 border-black/40 border pt-6 pb-6 pl-20 pr-20 rounded-full backdrop-blur"
       >
-        <ul className="flex space-x-14 list-none"> {/* Remove default list styles */}
+        <ul className="flex space-x-14 list-none">
           {[
             { text: "Home", href: "/" },
-            { text: "Our Team", href: "/our-team" },
+            { text: "About", href: "/about" },
             { text: "Projects", href: "/projects" },
             { text: "Contact", href: "/contact" },
           ].map((item, index) => (
             <li key={index} className="navbar-item">
-              <a
-                href={item.href}
-                data-text={index + 1}
-                className="transition-all duration-500 ease-in-out hover:tracking-wider hover:text-slate-700"
-              >
-                {item.text}
-              </a>
+              <Link href={item.href}>
+                <span
+                  data-text={index + 1}
+                  className="transition-all duration-500 ease-in-out hover:tracking-wider hover:text-slate-700"
+                >
+                  {item.text}
+                </span>
+              </Link>
             </li>
           ))}
         </ul>
@@ -122,7 +124,7 @@ const Navbar: React.FC = () => {
         <button
           id="menu-toggle"
           onClick={(e) => {
-            e.stopPropagation(); // Prevent click event from propagating to parent
+            e.stopPropagation();
             toggleNavbar();
           }}
           className={`navmenu btn-toggle fixed top-4 right-4 z-20 ${isOpen ? "open" : ""}`}
@@ -146,7 +148,7 @@ const Navbar: React.FC = () => {
         ref={navbarRef}
         className="navbar fixed inset-0 z-20 items-center justify-center hidden lg:hidden"
       >
-        <ul className="flex flex-col items-center space-y-8 list-none"> {/* Remove default list styles */}
+        <ul className="flex flex-col items-center space-y-8 list-none">
           {[
             { text: "Home", href: "/" },
             { text: "Our Team", href: "/our-team" },
@@ -154,13 +156,14 @@ const Navbar: React.FC = () => {
             { text: "Contact", href: "/contact" },
           ].map((item, index) => (
             <li key={index} className="navbar-item opacity-0">
-              <a
-                href={item.href}
-                data-text={index + 1}
-                className="text-white text-2xl font-bold uppercase relative block px-6 py-4 transition-all duration-500 ease-in-out hover:tracking-wider"
-              >
-                {item.text}
-              </a>
+              <Link href={item.href}>
+                <span
+                  data-text={index + 1}
+                  className="text-white text-2xl font-bold uppercase relative block px-6 py-4 transition-all duration-500 ease-in-out hover:tracking-wider"
+                >
+                  {item.text}
+                </span>
+              </Link>
             </li>
           ))}
         </ul>
