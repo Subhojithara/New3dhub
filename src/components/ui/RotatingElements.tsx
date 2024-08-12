@@ -16,7 +16,7 @@ const RotatingElements: React.FC = () => {
   const createScrollAnimation = () => {
     gsap.fromTo(
       [cerealBoxRef.current, flowerRef.current],
-      { rotation: 0, y: 0, scale: 1, background: 'linear-gradient(to bottom, #b7d4f7, ##e1edfc)' },
+      { rotation: 0, y: 0, scale: 1, background: 'linear-gradient(to bottom, #b7d4f7, #e1edfc)' },
       {
         rotation: 360,
         y: -200,
@@ -50,23 +50,21 @@ const RotatingElements: React.FC = () => {
   };
 
   return (
-    <div className="rotating-elements flex justify-between items-center">
+    <div className="rotating-elements flex justify-between items-center p-4 md:p-8">
       <div
         ref={cerealBoxRef}
-        className="cereal-box w-32 h-32 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-full glossy"
-      >
-      </div>
+        className="cereal-box w-24 h-24 md:w-32 md:h-32 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-full glossy"
+      ></div>
       <div
         ref={flowerRef}
-        className="flower w-80 h-60 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 rounded-full glossy"
+        className="flower w-48 h-48 md:w-64 md:h-64 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 rounded-full glossy flex justify-center items-center"
       >
-        <div className="h-40 w-40 bg-gradient-to-r from-blue-300 via-blue-200 to-blue-100 rounded-full shadow-lg"></div>
+        <div className="inner-circle h-24 w-24 md:h-40 md:w-40 bg-gradient-to-r from-blue-300 via-blue-200 to-blue-100 rounded-full shadow-lg"></div>
       </div>
       <div
         ref={sunRef}
-        className="sun w-40 h-40 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 flex justify-center items-center rounded-full"
-      >
-      </div>
+        className="sun w-24 h-24 md:w-40 md:h-40 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 flex justify-center items-center rounded-full"
+      ></div>
     </div>
   );
 };

@@ -18,8 +18,6 @@ import SvgProses from "@/components/Hero/ValuSection/SvgProses";
 import OurGoal from "@/components/Hero/OurGoal";
 import Compair from "@/components/Hero/Compair";
 import CardContainer from "@/components/Hero/CardContainer";
-import CustomComponent from "@/components/next/CustomComponent";
-
 
 
 export default function Home() {
@@ -27,7 +25,6 @@ export default function Home() {
     <div className="bg-white text-black">
       <HeroSection />
       <LogoCarousel />
-      <CustomComponent />
       <MoreBorder />
       <ItemsStats />
       <SplitScreen />
