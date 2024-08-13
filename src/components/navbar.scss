@@ -143,3 +143,7 @@ $toggle-anim-speed: 0.9s;
     box-shadow: rgba(lighten($toggle-line-color, 10%), 0.4) 0 0 2px 2px;
   }
 }
+
+.navbar-item {
+  will-change: transform, opacity; // Optimizes performance
+}

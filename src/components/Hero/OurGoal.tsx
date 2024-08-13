@@ -37,8 +37,8 @@ const OurGoal = () => {
       }
     };
 
-    animateElement(oldWay, { opacity: 0, x: -100, rotate:90, }, { opacity: 1, x: 0, duration: 1, rotate:0, });
-    animateElement(newWay, { opacity: 0, x: 100,  rotate:90, }, { opacity: 1, x: 0, duration: 1, rotate:0, });
+    animateElement(oldWay, { opacity: 0, x: -100, }, { opacity: 1, x: 0, duration: 1, });
+    animateElement(newWay, { opacity: 0, x: 100,  }, { opacity: 1, x: 0, duration: 1, });
 
     document.querySelectorAll<HTMLElement>('.text-line').forEach((line) => {
       animateElement(line, { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 1 });

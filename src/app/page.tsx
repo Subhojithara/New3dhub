@@ -18,6 +18,7 @@ import SvgProses from "@/components/Hero/ValuSection/SvgProses";
 import OurGoal from "@/components/Hero/OurGoal";
 import Compair from "@/components/Hero/Compair";
 import CardContainer from "@/components/Hero/CardContainer";
+import MarketingComparison from "@/components/Hero/Compair";
 
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
       <MoreBorder />
       <ItemsStats />
       <SplitScreen />
-      <Compair />
+      <MarketingComparison />
       <StretchingSection />
       <CardContainer />
       <ValueProp />

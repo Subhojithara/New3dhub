@@ -71,7 +71,7 @@ const Aboutus: React.FC = () => {
     <div className="min-h-screen w-full p-4 md:p-8">
       <div className="relative flex flex-col items-center">
         <div className="flex flex-col md:flex-row items-center md:items-start">
-          <div className="w-full md:w-[26rem] md:h-[40rem] text-[1.32rem] font-thin bg-cyan-950 text-white absolute top-0 right-0 p-8 rounded-xl duration-500 hover:bg-black hover:scale-110 hover:-rotate-2">
+          <div className="w-full md:w-[26rem] md:h-[40rem] font-light absolute top-0 right-0 p-8 rounded-xl duration-500 hover:scale-110 bg-white text-[1.35rem] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-black">
             {words}
             {words2}
           </div>

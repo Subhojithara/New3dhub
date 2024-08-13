@@ -46,14 +46,14 @@ const Navbar: React.FC = () => {
     openTimeline.set(navbarRef.current, { display: "flex" });
     openTimeline.to(circleRef.current, {
       scale: getVpdr(),
-      ease: Expo.easeInOut,
-      duration: 1.5,
+      ease: "power4.inOut",  // Smoother easing function
+      duration: 2,           // Increased duration for smoother animation
     });
     openTimeline.fromTo(
       ".navbar-item",
-      { y: 25, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.1, duration: 0.5 },
-      1
+      { y: 50, opacity: 0 }, // Increased initial offset for more pronounced animation
+      { y: 0, opacity: 1, stagger: 0.15, duration: 0.7 }, // Longer duration and stagger for smoother sequence
+      1.5                    // Start animation after the circle animation
     );
   };
 
@@ -62,12 +62,12 @@ const Navbar: React.FC = () => {
     closeTimeline.fromTo(
       ".navbar-item",
       { y: 0, opacity: 1 },
-      { y: 25, opacity: 0, stagger: -0.1, duration: 0.5 }
+      { y: 50, opacity: 0, stagger: -0.15, duration: 0.7 } // Symmetrical to openNavbar
     );
     closeTimeline.to(circleRef.current, {
       scale: 0,
-      ease: Expo.easeInOut,
-      duration: 1,
+      ease: "power4.inOut",  // Matching easing function for smoothness
+      duration: 1.5,
     });
     closeTimeline.set(navbarRef.current, { display: "none" });
   };
