@@ -69,7 +69,7 @@ const HeroSection = () => {
     <div className="min-h-screen">
       <BackgroundBeams />
       <div className="flex flex-col items-center lg:flex-row lg:items-start lg:justify-between lg:min-h-screen">
-        <div className="mt-20 lg:mt-40 px-4 text-center lg:text-left">
+        <div className="mt-20 lg:mt-48 px-20 text-center lg:text-left">
           <div className="pb-2">
             <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-black inline-block">
               <span className="absolute inset-0 overflow-hidden rounded-full">
@@ -96,11 +96,14 @@ const HeroSection = () => {
               <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
             </button>
           </div>
-          <h1 className="w-full lg:w-[42rem] text-4xl lg:text-6xl font-black uppercase font-['Oswald']">Make Your Brand Remembered, Traditional Marketing Done Right 🚀</h1>
+          <h1 className="w-full lg:w-[42rem] text-4xl lg:text-6xl font-semibold">Make Your Brand Remembered, Traditional Marketing Done Right 🚀</h1>
           <p className="pt-4 w-full lg:w-[40rem]">We help Brands leverage traditional advertising through the biggest festivals of India, using modern-day creative strategies that impact and drive customer loyalty.</p>
-          <div className="pt-4 flex justify-center lg:justify-start">
-            <button className="border h-14 w-60 border-black rounded-xl">
+          <div className="pt-4 flex justify-center lg:justify-start space-x-6">
+            <button className="border h-14 w-52 text-xl font-semibold text-white  rounded-full bg-[#6478F7]">
               Contact Us
+            </button>
+            <button className="h-14 w-52 text-xl font-semibold rounded-full">
+            ▶ Watch Video
             </button>
           </div>
         </div>
