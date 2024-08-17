@@ -13,15 +13,14 @@ const SectionTwo: React.FC = () => {
         </div>
         <div>
           <div className="h-16 w-40 rounded-2xl bg-gradient-to-r from-indigo-200 via-indigo-300 to-indigo-500 shadow-3xl text-center flex justify-center items-center hover-element duration-500 hover:scale-110 reveal-text">
-            <p className="text-4xl font-bold">Easy</p>
+            <p className="text-4xl font-bold">And</p>
           </div>
           <div className="h-16 w-40 rotate-12 rounded-2xl bg-gradient-to-r from-orange-500 via-orange-300 to-orange-100 shadow-3xl text-center flex justify-center items-center hover-element duration-500 hover:scale-110 reveal-text">
-            <p className="text-4xl font-bold">Easing</p>
+            <p className="text-4xl font-bold">Easy</p>
           </div>
         </div>
         <p className="text-9xl font-bold hover-element reveal-text">Add personality</p>
       </div>
-      <p className="pt-12 text-2xl font-semibold w-[46rem]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quaerat voluptatibus possimus. Culpa doloribus deserunt rem vel molestias distinctio mollitia?</p>
     </div>
     </div>
   );

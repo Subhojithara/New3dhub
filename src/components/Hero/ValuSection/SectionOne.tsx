@@ -1,4 +1,4 @@
-// components/SectionOne.tsx
+
 
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
@@ -59,12 +59,14 @@ const SectionOne: React.FC = () => {
         <div className="space-y-1">
           <div className="w-0 h-0 border-l-[50px] border-l-transparent border-t-[75px] border-t-orange-100 border-r-[50px] border-r-transparent rotating-element duration-500 hover:scale-110"></div>
           <div className="w-96 h-14 bg-gradient-to-r text-white from-yellow-500 via-yellow-300 to-yellow-100 -rotate-4 flex text-center justify-center text-4xl items-center font-['Bebas_Neue'] rounded-xl shadow-xl hover-element duration-500 hover:scale-110">
-            <h1>Lorem ipsum dolor sit amet</h1>
+            <h1 className="text-4xl">BUT TRADITIONAL</h1>
           </div>
           <div className="w-96 h-14 bg-gradient-to-r text-white from-orange-500 via-orange-300 to-orange-100 -rotate-2 flex text-center justify-center text-4xl items-center font-['Bebas_Neue'] rounded-xl shadow-xl hover-element duration-500 hover:scale-110">
-            <h1>Lorem ipsum dolor sit amet</h1>
+            <h1>ISN’T SIMPLE ANYMORE</h1>
           </div>
-          <p className="pt-10 w-[40rem] text-4xl font-semibold hover-element duration-500 hover:scale-110 reveal-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, quam error exercitationem aliquam illo nihil.</p>
+          <p className="pt-10 w-[40rem] text-2xl font-semibold hover-element duration-500 hover:scale-110 reveal-text">
+          With the rise of digital and creative marketing at it’s best, you can’t just put up a banner on the highways and expect your business to grow. Understanding the market, and building a marketing workflow that gets in customers with creativity and right strategy is the only key to SUCCESS.
+          </p>
         </div>
         <div className="h-96 w-96 rounded-full bg-gradient-to-r from-orange-500 via-orange-300 to-orange-100 rotating-element">
           <div className="h-20 w-20 rounded-full bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-100"></div>

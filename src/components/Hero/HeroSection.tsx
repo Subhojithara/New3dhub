@@ -99,7 +99,7 @@ const HeroSection = () => {
           <h1 className="w-full lg:w-[42rem] text-4xl lg:text-6xl font-semibold">Make Your Brand Remembered, Traditional Marketing Done Right 🚀</h1>
           <p className="pt-4 w-full lg:w-[40rem]">We help Brands leverage traditional advertising through the biggest festivals of India, using modern-day creative strategies that impact and drive customer loyalty.</p>
           <div className="pt-4 flex justify-center lg:justify-start space-x-6">
-            <button className="border h-14 w-52 text-xl font-semibold text-white  rounded-full bg-[#6478F7]">
+            <button className="border h-14 w-52 text-xl font-semibold text-white  rounded-full bg-green-600">
               Contact Us
             </button>
             <button className="h-14 w-52 text-xl font-semibold rounded-full">
