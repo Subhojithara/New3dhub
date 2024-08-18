@@ -3,7 +3,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import RotatingElements from '../ui/RotatingElements';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,8 +36,8 @@ const OurGoal = () => {
       }
     };
 
-    animateElement(oldWay, { opacity: 0, x: -100, }, { opacity: 1, x: 0, duration: 1, });
-    animateElement(newWay, { opacity: 0, x: 100,  }, { opacity: 1, x: 0, duration: 1, });
+    animateElement(oldWay, { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1 });
+    animateElement(newWay, { opacity: 0, x: 100 }, { opacity: 1, x: 0, duration: 1 });
 
     document.querySelectorAll<HTMLElement>('.text-line').forEach((line) => {
       animateElement(line, { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 1 });
@@ -71,26 +70,25 @@ const OurGoal = () => {
     points.map((text, index) => <li key={index} className="text-line">{text}</li>);
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-around p-8 space-y-8">
-      <div className="text-center p-8">
-        <h1 className="text-2xl font-bold">OUR GOAL</h1>
-        <p className="pt-2">We’re a very simple team and with a very simple goal. We’re deploying everything we learnt from working with some of the biggest brands in India and working with the most hardest B2B niches.
-
-Plus, from the last 2 years, we’ve been studying the market, it’s pattern and the biggest gaps to fulfill. We target the gaps no one is even noticing.
-
-Thus, we most probably would know one or few more things about implementing traditional marketing with festivals to create a sacred impact for your brand!
-</p>
+    <div className="min-h-screen w-full flex flex-col items-center justify-around p-8 space-y-8 overflow-hidden">
+      <div className="text-center p-4 md:p-8">
+        <h1 className="text-2xl md:text-4xl font-bold">OUR GOAL</h1>
+        <p className="pt-2 md:pt-4 text-sm md:text-lg leading-relaxed">
+          We’re a very simple team with a very simple goal. We’re deploying everything we’ve learned from working with some of the biggest brands in India and in the most challenging B2B niches.
+          Over the last 2 years, we’ve been studying the market, its patterns, and the biggest gaps to fill. We target the gaps no one is even noticing.
+          We likely know one or more things about implementing traditional marketing with festivals to create a sacred impact for your brand!
+        </p>
       </div>
-      <div className="flex flex-wrap justify-center w-full space-x-8">
-        <div ref={oldWayRef} className="relative w-full max-w-xl p-8 border border-black bg-white shadow-lg rounded-lg transform">
-          <h2 className="text-2xl font-bold mb-4">The Old Way:</h2>
-          <ul className="list-disc pl-4 space-y-2">
+      <div className="flex flex-wrap justify-center w-full space-y-8 lg:space-y-0 lg:space-x-8">
+        <div ref={oldWayRef} className="relative w-full max-w-xl p-4 md:p-8 border border-black bg-white shadow-lg rounded-lg transform">
+          <h2 className="text-xl md:text-2xl font-bold mb-4">The Old Way:</h2>
+          <ul className="list-disc pl-4 space-y-2 text-sm md:text-lg">
             {renderList(oldWayPoints)}
           </ul>
         </div>
-        <div ref={newWayRef} className="relative w-full max-w-xl p-8 border border-black bg-white shadow-lg rounded-lg transform">
-          <h2 className="text-2xl font-bold mb-4">The New Way:</h2>
-          <ul className="list-disc pl-4 space-y-2">
+        <div ref={newWayRef} className="relative w-full max-w-xl p-4 md:p-8 border border-black bg-white shadow-lg rounded-lg transform">
+          <h2 className="text-xl md:text-2xl font-bold mb-4">The New Way:</h2>
+          <ul className="list-disc pl-4 space-y-2 text-sm md:text-lg">
             {renderList(newWayPoints)}
           </ul>
         </div>

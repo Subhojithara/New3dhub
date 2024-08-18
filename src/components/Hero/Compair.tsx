@@ -49,76 +49,58 @@ export default function MarketingComparison() {
   }, []);
 
   return (
-    <div className="main-h-screen pb-10">
-    <div className="container mx-auto">
-      {/* Traditional Marketing Section */}
-      <div className="flex flex-wrap">
-        <div className="flex flex-col items-start mb-20 w-full md:w-1/2">
-          <h1 className="text-6xl font-bold text-left top-0 bg-gradient-to-r from-lime-300 via-cyan-200 to-blue-400 inline-block text-transparent bg-clip-text p-2 bg-white">
-            Traditional Marketing
-          </h1>
-          <div className="mt-8 w-full text-left reveal-text text-neutral-700 font-['Poppins']">
-            <h2 className="text-2xl font-bold">Pros of Traditional</h2>
-            <ul className="text-xl font-light">
-              <li>💸 More cost-effective (if done right)</li>
-              <li>🎯 Able to target the entire market + the 61% untapped</li>
-              <li>📢 Greater awareness and impact</li>
-              <li>⚡ Quicker to implement and gain traction</li>
-            </ul>
-            <h2 className="text-2xl font-bold  mt-4">Cons of Traditional</h2>
-            <ul className="text-xl font-light">
-              <li>🔍 Doesn&apos;t work for very specific audiences</li>
-              <li>⛔ Doesn&apos;t work based on intent triggers</li>
-              <li>📉 Difficult to build trackable KPIs</li>
-              <li>💪 Requires a lot of physical effort and money to scale</li>
-            </ul>
+    <div className="main-h-screen pb-10 overflow-hidden">
+      <div className="container mx-auto lg:flex lg:flex-wrap">
+        {/* Traditional Marketing Section */}
+        <div className="flex flex-wrap w-full lg:w-1/2">
+          <div className="flex flex-col items-start">
+            <h1 className="text-4xl font-bold text-left bg-gradient-to-r from-lime-300 via-cyan-200 to-blue-400 inline-block text-transparent bg-clip-text p-2 bg-white">
+              Traditional Marketing
+            </h1>
+            <div className="mt-8 w-full text-left reveal-text text-neutral-700 font-['Poppins']">
+              <h2 className="text-2xl font-bold">Pros of Traditional</h2>
+              <ul className="text-xl font-light">
+                <li>💸 More cost-effective (if done right)</li>
+                <li>🎯 Able to target the entire market + the 61% untapped</li>
+                <li>📢 Greater awareness and impact</li>
+                <li>⚡ Quicker to implement and gain traction</li>
+              </ul>
+              <h2 className="text-2xl font-bold mt-4">Cons of Traditional</h2>
+              <ul className="text-xl font-light">
+                <li>🔍 Doesn&apos;t work for very specific audiences</li>
+                <li>⛔ Doesn&apos;t work based on intent triggers</li>
+                <li>📉 Difficult to build trackable KPIs</li>
+                <li>💪 Requires a lot of physical effort and money to scale</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2 flex justify-center">
-          <Image
-            src="/marketing.svg"
-            alt="Traditional Marketing"
-            width={400}
-            height={400}
-            className="w-3/4 marketing-svg"
-          />
-        </div>
-      </div>
 
-      {/* Digital Marketing Section */}
-      <div className="flex flex-wrap flex-row-reverse">
-        <div className="flex flex-col items-end mb-20 w-full md:w-1/2">
-          <h1 className="text-6xl font-bold text-right top-0 bg-gradient-to-r from-lime-300 via-cyan-200 to-blue-400 inline-block text-transparent bg-clip-text p-2 bg-white">
-            Digital Marketing
-          </h1>
-          <div className="mt-8 w-full lg:pl-44 pl-0 reveal-text  text-neutral-700 font-['Poppins']">
-            <h2 className="text-2xl font-semibold">Pros of Digital</h2>
-            <ul className="text-xl font-light">
-              <li>🎯 Extremely targeted</li>
-              <li>🎯 Based on intent</li>
-              <li>💰 Healthy ROI (if done right)</li>
-              <li>📈 Scalable once good results are obtained</li>
-            </ul>
-            <h2 className="text-2xl font-semibold mt-4">Cons of Digital</h2>
-            <ul className="text-xl font-light">
-              <li>💸 Insanely expensive (if not done right)</li>
-              <li>🚫 Can&apos;t target the 61% of the market</li>
-              <li>💤 Low awareness due to too many distractions</li>
-              <li>⏳ Requires time and money to scale</li>
-            </ul>
+        {/* Digital Marketing Section */}
+        <div className="flex flex-wrap w-full lg:w-1/2 lg:flex-row-reverse">
+          <div className="flex flex-col items-end">
+            <h1 className="text-4xl font-bold text-right bg-gradient-to-r from-lime-300 via-cyan-200 to-blue-400 inline-block text-transparent bg-clip-text p-2 bg-white">
+              Digital Marketing
+            </h1>
+            <div className="mt-8 w-full lg:pl-44 pl-0 reveal-text text-neutral-700 font-['Poppins']">
+              <h2 className="text-2xl font-semibold">Pros of Digital</h2>
+              <ul className="text-xl font-light">
+                <li>🎯 Extremely targeted</li>
+                <li>🎯 Based on intent</li>
+                <li>💰 Healthy ROI (if done right)</li>
+                <li>📈 Scalable once good results are obtained</li>
+              </ul>
+              <h2 className="text-2xl font-semibold mt-4">Cons of Digital</h2>
+              <ul className="text-xl font-light">
+                <li>💸 Insanely expensive (if not done right)</li>
+                <li>🚫 Can&apos;t target the 61% of the market</li>
+                <li>💤 Low awareness due to too many distractions</li>
+                <li>⏳ Requires time and money to scale</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2 flex justify-center">
-          <Image
-            src="/marketing.svg"
-            alt="Digital Marketing"
-            width={500}
-            height={500}
-            className="w-3/4 marketing-svg"
-          />
-        </div>
       </div>
-    </div>
     </div>
   );
 }
