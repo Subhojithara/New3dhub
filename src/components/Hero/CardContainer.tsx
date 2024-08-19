@@ -6,7 +6,7 @@ import Image from "next/image";
 const CardContainer = () => {
     return (
         <div className="min-h-screen w-full bg-neutral-950">
-            <div className="flex justify-center items-center px-4 sm:px-8 md:px-16">
+            <div className="flex justify-center items-center px-4 sm:px-8 md:px-16 pb-10">
                 <div className="w-full lg:w-[80rem]">
                     <div className="card bg-white h-[35rem] lg:h-[30rem] xl:h-[35rem] sticky border border-gray-300 rounded-2xl top-[10px] flex flex-col md:flex-row">
                         <div className="bg-green-500 rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none h-full w-full md:w-[42rem] p-5 relative">
@@ -35,7 +35,7 @@ const CardContainer = () => {
                         </h1>
                     </div>
 
-                    <div className="card bg-green-500 h-[35rem] sticky border text-white border-gray-300 rounded-2xl top-[30px] mt-16 justify-center items-center lg:flex">
+                    <div className="card bg-green-500/50 backdrop-blur-lg h-[35rem] sticky border text-white border-gray-300 rounded-2xl top-[30px] mt-16 justify-center items-center lg:flex">
                         <div className="lg:space-y-0 space-y-10 lg:flex justify-center items-center mt-10">
                         <h1 className="lg:text-9xl text-5xl lg:w-[58rem] text-center font-bold lg:absolute lg:leading-[10rem] leading-[4rem] uppercase lg:right-32">
                             And do you know Why?
@@ -46,12 +46,12 @@ const CardContainer = () => {
                         </div>
                     </div>
 
-                    <div className="card bg-black backdrop-blur-md h-[40rem] lg:h-[30rem] xl:h-[35rem] sticky border border-gray-300 rounded-2xl top-[40px] mt-16 flex flex-col md:flex-row-reverse">
+                    <div className="card bg-white backdrop-blur-md h-[40rem] lg:h-[30rem] xl:h-[35rem] sticky border border-gray-300 rounded-2xl top-[40px] mt-16 flex flex-col md:flex-row-reverse">
                         <div className="bg-green-500 rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none h-full w-full  md:w-[42rem] p-5 relative">
-                            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-extrabold font-[Montserrat] uppercase text-center lg:text-right">
+                            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-extrabold lg:pt-4 font-[Montserrat] uppercase text-center lg:text-right">
                                 And now is the best time to leverage traditional marketing at its best. Why?
                             </h1>
-                            <p className="text-xl font-light text-white mt-6 md:absolute md:top-60 md:right-5 w-full md:w-[38rem]">
+                            <p className="text-xl font-light text-white mt-6 lg:pt-4 md:absolute md:top-60 md:right-5 w-full md:w-[38rem] text-right">
                                 Everyone is focused on digital, making traditional marketing the most cost-effective marketing channel specifically for B2C and D2C industry.
                             </p>
                             <div className="w-full md:w-[40rem] border border-white mt-6 md:absolute md:top-96 md:left-4"></div>

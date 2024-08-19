@@ -30,6 +30,7 @@ export default function Home() {
       <ItemsStats />
       <SplitScreen />
       <MarketingComparison />
+      <StretchingSection />
       <CardContainer />
       <ValueProp />
       <Aboutus />

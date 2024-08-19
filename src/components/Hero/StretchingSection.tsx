@@ -15,13 +15,14 @@ const StretchingSection = () => {
   useEffect(() => {
     const section = sectionRef.current;
     const text = textRef.current;
+    const isMobile = window.innerWidth < 768;
 
     if (section && text) {
       gsap.fromTo(
         section,
         { scaleY: 1, background: '#fff' },
         {
-          scaleY: 10,
+          scaleY: isMobile ? 4 : 10, // Smaller scale on mobile
           background: '#040D12',
           ease: 'none',
           scrollTrigger: {
@@ -38,7 +39,7 @@ const StretchingSection = () => {
         text,
         { scaleX: 1, color: '#000' },
         {
-          scaleX: 5, // Stretch text horizontally on both sides
+          scaleX: isMobile ? 2.5 : 5, // Smaller stretch on mobile
           color: '#bbff00',
           ease: 'none',
           scrollTrigger: {
@@ -55,7 +56,7 @@ const StretchingSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="h-screen flex justify-center items-center overflow-hidden"
+      className="h-screen flex justify-center items-center overflow-hidden px-4 sm:px-8"
     >
       <h1
         ref={textRef}

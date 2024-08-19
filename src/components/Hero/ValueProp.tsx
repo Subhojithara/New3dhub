@@ -127,10 +127,10 @@ const ValueProp: React.FC = () => {
           <div className="flex flex-col items-center lg:pl-44">
             <div>
               <div className="p-6 text-center flex justify-center items-center rounded-2xl bg-gradient-to-r from-green-500 via-yellow-100 to-green-50 shadow-2xl hover-element">
-                <h1 className="lg:text-5xl text-2xl uppercase font-black reveal-text text-slate-800">To win at traditional, you must have the:</h1>
+                <h1 className="lg:text-5xl text-base uppercase font-black reveal-text text-slate-800">To win at traditional, you must have the:</h1>
               </div>
-              <div className="flex flex-wrap lg:justify-center mt-5 lg:space-x-10">
-                <ul className="lg:text-xl text-sm mt-5 font-semibold font-sans w-[28] lg:w-[40rem]">
+              <div className="lg:flex lg:flex-wrap lg:justify-center mt-5 lg:space-x-10 p-5">
+                <ul className="lg:text-xl mt-5 font-semibold font-sans w-[20rem] lg:w-[40rem]">
                   <li>💸 More cost-effective (if done right)</li>
                   <li>🎯 Able to target the entire market + the 61% untapped</li>
                   <li>📢 Greater awareness and impact</li>
@@ -138,7 +138,7 @@ const ValueProp: React.FC = () => {
                   <li>💗 Understanding how to win hearts</li>
                   <li>🧠 Understanding how to hit the bullseye and make your business remembered</li>
                 </ul>
-                <ul className="lg:text-xl text-sm mt-5 font-semibold font-sans w-[28] lg:w-[40rem]">
+                <ul className="lg:text-xl mt-5 font-semibold font-sans w-[20rem] lg:w-[40rem]">
                   <li>㊙️ Understand the secret sauce behind emotions and correct timing</li>
                   <li>📢 Understanding how to make your marketing not feel like marketing</li>
                   <li>👁 Understanding the right way to advertise and capture attention</li>
