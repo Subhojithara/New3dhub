@@ -19,6 +19,7 @@ import OurGoal from "@/components/Hero/OurGoal";
 import Compair from "@/components/Hero/Compair";
 import CardContainer from "@/components/Hero/CardContainer";
 import MarketingComparison from "@/components/Hero/Compair";
+import SvgGraph from "@/components/Hero/SvgGraph";
 
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
       <SplitScreen />
       <MarketingComparison />
       <StretchingSection />
+      <SvgGraph />
       <CardContainer />
       <ValueProp />
       <Aboutus />
